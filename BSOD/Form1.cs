@@ -18,7 +18,7 @@ namespace BSOD
     public partial class Form1 : Form
     {
         string[] Accounts;
-        Thread[] Potok = new Thread[1];
+        Thread Potok;
         public Form1()
         {
             InitializeComponent();
@@ -28,8 +28,8 @@ namespace BSOD
         {
             label14.Text = "0";
             label12.Text = "0";
-            Potok[0] = new Thread(Proverka_Avtoreg);
-            Potok[0].Start();
+            Potok = new Thread(Proverka_Avtoreg);
+            Potok.Start();
 
         } //press start
 
